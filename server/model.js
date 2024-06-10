@@ -18,12 +18,16 @@ Admin.init(
             autoIncrement: true,
             primaryKey: true,
         },
-        userName: {
+        email: {
             type: DataTypes.STRING
         },
         password: {
             type: DataTypes.STRING
-        }
+        },
+        verificationToken: {
+          type: DataTypes.STRING,
+          allowNull: true,
+        },
     },
     {
         modelName: 'admins',

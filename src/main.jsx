@@ -10,11 +10,16 @@ import App from "./App.jsx";
 import "./index.css";
 import ErrorPage from "../pages/ErrorPage.jsx";
 import IndexPage from "../pages/IndexPage.jsx";
+import AdminLoginPage from "../pages/AdminLoginPage.jsx";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorPage />}>
       <Route index element={<IndexPage />} />
+
+      <Route path="admin-login" element={<AdminLoginPage />} />
+
     </Route>
   )
 );
