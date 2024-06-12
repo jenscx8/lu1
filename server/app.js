@@ -7,6 +7,10 @@ import { Server } from 'socket.io';
 import ViteExpress from 'vite-express';
 // import routes
 import adminRoutes from './controllers/adminRoutes.js'
+import instructorRoutes from './controllers/instructorRoutes.js'
+// import { db } from './model.js'; // Import your Sequelize models
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 const app = express();
@@ -32,6 +36,8 @@ app.use(session({ secret: 'ssshhhhh', saveUninitialized: true, resave: false }))
 
 // admin routes
 app.use('/api/admin', adminRoutes);
+// instructor routes
+app.use('/api/instructors', instructorRoutes)
 
 // end routes
 
