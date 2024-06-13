@@ -246,13 +246,8 @@ Admin.init(
 
 // associations
 
-// instructor has many resorts
-Instructor.hasMany(Resort, { foreignKey: "resortId" });
-// instructor has many reviews
 Instructor.hasMany(Review, { foreignKey: "instructorId" });
 // resort belongs to user
-Resort.hasMany(Instructor, { foreignKey: "resortId" });
-// recipes has many comments
 Student.hasMany(Review, { foreignKey: "studentId" });
 // review belongs to innstructor
 Review.belongsTo(Instructor, { foreignKey: "instructorId" });

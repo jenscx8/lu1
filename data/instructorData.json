@@ -1,0 +1,40 @@
+[
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "bio": "Experienced snowboard instructor",
+      "location": "Ski Apache",
+      "certification": ["Level 2"],
+      "socials": ["venmo123", "cashapp123"],
+      "email": "john@example.com",
+      "password": "password123"
+    },
+    {
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "bio": "Ski instructor with a passion for teaching",
+      "location": "Park City",
+      "certification": ["Level 3"],
+      "email": "jane@example.com",
+      "password": "password456"
+    },
+    {
+      "firstName": "Mike",
+      "lastName": "Johnson",
+      "bio": "hello ",
+      "location": "Angel Fire",
+      "certification": ["Adaptive Level 1"],
+      "email": "mike@example.com",
+      "password": "password789"
+    },
+    {
+      "firstName": "Trey",
+      "lastName": "Correa",
+      "bio": "Adaptive skiing specialist",
+      "location": "Angel Fire",
+      "certification": ["Adaptive Level 3", "snowboard level 2"],
+      "email": "trey@example.com",
+      "password": "123"
+    }
+  ]
+  

@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Aspen Snowmass",
+      "location": "Aspen, Colorado",
+      "logo": "aspen_snowmass_logo.svg",
+      "banner": "aspen_snowmass_mountain.jpg",
+      "svg": "aspen_snowmass.svg"
+    },
+    {
+      "name": "Whistler Blackcomb",
+      "location": "Whistler, British Columbia",
+      "logo": "whistler_blackcomb_logo.svg",
+      "banner": "whistler_blackcomb_mountain.jpg",
+      "svg": "whistler_blackcomb.svg"
+    },
+    {
+      "name": "Vail",
+      "location": "Vail, Colorado",
+      "logo": "vail_logo.svg",
+      "banner": "vail_mountain.jpg",
+      "svg": "vail.svg"
+    },
+    {
+      "name": "Park City Mountain Resort",
+      "location": "Park City, Utah",
+      "logo": "park_city_logo.svg",
+      "banner": "park_city_mountain.jpg",
+      "svg": "park_city.svg"
+    },
+    {
+      "name": "Breckenridge",
+      "location": "Breckenridge, Colorado",
+      "logo": "breckenridge_logo.svg",
+      "banner": "breckenridge_mountain.jpg",
+      "svg": "breckenridge.svg"
+    }
+  ]
+  

@@ -1,0 +1,48 @@
+[
+    {
+      "lessonId": 1,
+      "lessonType": "adult group morning",
+      "date": "2024-05-10",
+      "time": "10:00 AM",
+      "location": "Park City, Utah",
+      "instructorId": 1,
+      "roster": [
+        {
+          "studentId": 1,
+          "firstName": "Alice",
+          "lastName": "Smith"
+        },
+        {
+          "studentId": 2,
+          "firstName": "Bob",
+          "lastName": "Johnson"
+        },
+        {
+          "studentId": 3,
+          "firstName": "Charlie",
+          "lastName": "Brown"
+        }
+      ]
+    },
+    {
+      "lessonId": 2,
+      "lessonType": "adult group afternoon",
+      "date": "2024-05-15",
+      "time": "2:00 PM",
+      "location": "Park City, Utah",
+      "instructorId": 2,
+      "roster": [
+        {
+          "studentId": 4,
+          "firstName": "David",
+          "lastName": "Lee"
+        },
+        {
+          "studentId": 5,
+          "firstName": "Emma",
+          "lastName": "Garcia"
+        }
+      ]
+    }
+  ]
+  

@@ -8,6 +8,9 @@ import ViteExpress from 'vite-express';
 // import routes
 import adminRoutes from './controllers/adminRoutes.js'
 import instructorRoutes from './controllers/instructorRoutes.js'
+import reviewRoutes from './controllers/reviewRoutes.js'
+import lessonRoutes from './controllers/lessonRoutes.js'
+import resortRoutes from './controllers/resortRoutes.js';
 // import { db } from './model.js'; // Import your Sequelize models
 import dotenv from 'dotenv';
 dotenv.config();
@@ -38,6 +41,12 @@ app.use(session({ secret: 'ssshhhhh', saveUninitialized: true, resave: false }))
 app.use('/api/admin', adminRoutes);
 // instructor routes
 app.use('/api/instructors', instructorRoutes)
+// review routes
+app.use('/api/review', reviewRoutes)
+// lesson routes
+app.use('/api/lessons', lessonRoutes)
+// resort routes
+app.use('/api/resorts', resortRoutes)
 
 // end routes
 
