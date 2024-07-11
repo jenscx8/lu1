@@ -11,6 +11,9 @@ import "./index.css";
 import ErrorPage from "../pages/ErrorPage.jsx";
 import IndexPage, {indexLoader} from "../pages/IndexPage.jsx";
 import AdminLoginPage from "../pages/AdminLoginPage.jsx";
+import InstructorProfilePage, {instructorLoader} from "../pages/InstructorProfilePage.jsx";
+import StudentLoginPage from "../pages/StudentLoginPage.jsx";
+
 
 
 const router = createBrowserRouter(
@@ -19,6 +22,8 @@ const router = createBrowserRouter(
       <Route index element={<IndexPage />} loader={indexLoader} />
 
       <Route path="admin-login" element={<AdminLoginPage />} />
+      <Route path="student-login" element={<StudentLoginPage />} />
+      <Route path="instructors/:instructorId" element={<InstructorProfilePage />} loader={instructorLoader} />
 
     </Route>
   )

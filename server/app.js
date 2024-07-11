@@ -11,7 +11,8 @@ import instructorRoutes from './controllers/instructorRoutes.js'
 import reviewRoutes from './controllers/reviewRoutes.js'
 import lessonRoutes from './controllers/lessonRoutes.js'
 import resortRoutes from './controllers/resortRoutes.js';
-// import { db } from './model.js'; // Import your Sequelize models
+import studentRoutes from './controllers/studentRoutes.js'
+import { Instructor } from './model.js'; // Import your Sequelize models
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -41,12 +42,38 @@ app.use(session({ secret: 'ssshhhhh', saveUninitialized: true, resave: false }))
 app.use('/api/admin', adminRoutes);
 // instructor routes
 app.use('/api/instructors', instructorRoutes)
+// student routes
+app.use('/api/students', studentRoutes)
 // review routes
 app.use('/api/review', reviewRoutes)
 // lesson routes
 app.use('/api/lessons', lessonRoutes)
 // resort routes
 app.use('/api/resorts', resortRoutes)
+
+// search instructors
+app.get('/api/search-instructors', async (req, res) => {
+  const { query } = req.query;
+
+  try {
+    const instructors = await Instructor.findAll({
+      where: {
+        [Sequelize.Op.or]: [
+          { firstName: { [Sequelize.Op.iLike]: `%${query}%` } },
+          { lastName: { [Sequelize.Op.iLike]: `%${query}%` } },
+          { email: { [Sequelize.Op.iLike]: `%${query}%` } },
+          { location: { [Sequelize.Op.iLike]: `%${query}%` } },
+          Sequelize.literal(`CONCAT("first_name", ' ', "last_name") ILIKE '%${query}%'`)
+        ],
+      },
+    });
+
+    res.json(instructors);
+  } catch (error) {
+    console.error("Failed to search instructors", error);
+    res.status(500).json({ error: 'Failed to search instructors' });
+  }
+});
 
 // end routes
 

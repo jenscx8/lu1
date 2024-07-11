@@ -247,12 +247,10 @@ Admin.init(
 // associations
 
 Instructor.hasMany(Review, { foreignKey: "instructorId" });
-// resort belongs to user
-Student.hasMany(Review, { foreignKey: "studentId" });
-// review belongs to innstructor
 Review.belongsTo(Instructor, { foreignKey: "instructorId" });
-// lesson belongs to instructor
+
+Student.hasMany(Review, { foreignKey: "studentId" });
+Review.belongsTo(Student, { foreignKey: "studentId" });
+
 Lesson.belongsTo(Instructor, { foreignKey: "instructorId" });
-// instructor has many lessons
-Instructor.hasMany(Lesson, { foreignKey: "lessonId" });
-// messaging associations
+Instructor.hasMany(Lesson, { foreignKey: "instructorId" });

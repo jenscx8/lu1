@@ -48,8 +48,8 @@ export async function indexLoader() {
       }
   
       try {
-        const response = await axios.get(`/api/search-instructors`, {
-          params: { query },
+        const response = await axios.get("/api/search-instructors", {
+          params: { query }
         });
         setFilteredInstructors(response.data);
       } catch (error) {
