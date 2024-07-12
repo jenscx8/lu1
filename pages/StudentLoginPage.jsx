@@ -1,3 +1,4 @@
+import React from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -12,7 +13,7 @@ export default function StudentLoginPage() {
     const res = await axios.post('/api/students/student-auth', formData);
 
     if (res.data.success) {
-      navigate('/me-student');
+      navigate('/student-dashboard');
     }
   };
 

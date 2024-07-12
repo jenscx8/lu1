@@ -7,14 +7,7 @@ import { Student } from "../model.js";
 const router = express.Router();
 const saltRounds = 10;
 
-// student auth function
-function studentLoginRequired(req, res, next) {
-  if (!req.session.studentId) {
-    res.status(401).json({ error: "Unauthorized" });
-  } else {
-    next();
-  }
-}
+
 
 // get students
 router.get("/students", async (req, res) => {
@@ -33,7 +26,7 @@ router.post("/create", async (req, res) => {
       firstName,
       lastName,
       email,
-      password,
+      password: hashedPassword,
     });
     res.json(newStudent);
   } catch (error) {
@@ -60,15 +53,7 @@ router.post("/student-auth", async (req, res) => {
   }
 });
 
-// student private profile
-router.get("/student-profile", studentLoginRequired, async (req, res) => {
-  const { studentId } = req.session;
-  const session = req.session;
-  const student = await Student.findByPk(studentId);
 
-  console.log(session);
-  res.json(student);
-});
 
 // student public profile
 router.get("/:studentId", async (req, res) => {
